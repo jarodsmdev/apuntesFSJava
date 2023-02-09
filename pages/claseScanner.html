@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Operadores</title>
+    <title>La Clase Scanner</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -21,41 +21,25 @@
         <li><a href="../index.html">Inicio</a></li>
       </ul>
     <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-operadores-en-java" ebook-toc-level-1 heading="Operadores en Java">Operadores en Java</h1>
+    <html><head></head><body><div><h1 class="mume-header" id="-la-clase-scanner">La Clase Scanner</h1>
 
 <hr>
-<h2 class="mume-header" id="-aritm%C3%A9ticos" ebook-toc-level-2 heading="Aritm&amp;#xE9;ticos">Aritm&#xE9;ticos</h2>
+<h2 class="mume-header" id="-utilizar-la-clase-scanner">Utilizar la clase Scanner</h2>
 
-<ul>
-<li>+ : Suma</li>
-<li>- : Resta</li>
-<li>* : Multiplicaci&#xF3;n</li>
-<li>/ : Divisi&#xF3;n</li>
-<li>% : M&#xF3;dulo</li>
-</ul>
-<h2 class="mume-header" id="-l%C3%B3gicos-relacionales-y-booleanos" ebook-toc-level-2 heading="L&amp;#xF3;gicos, relacionales y booleanos">L&#xF3;gicos, relacionales y booleanos</h2>
-
-<ul>
-<li>&gt;  : Mayor que</li>
-<li>&gt;= : Mayor o igual que</li>
-<li>&lt;  : Menor que</li>
-<li>&lt;= : Menor o igual que</li>
-<li>&lt;&gt; : Mayor o Menor que</li>
-<li>!= : Distinto que</li>
-<li>== : Igual que</li>
-<li>&amp;&amp; : Y l&#xF3;gico</li>
-<li>|| : O l&#xF3;gico</li>
-<li>!  : Negaci&#xF3;n L&#xF3;gica</li>
-</ul>
-<h2 class="mume-header" id="-incremento-y-decremento" ebook-toc-level-2 heading="Incremento y decremento">Incremento y decremento</h2>
-
-<p>++ : Incremento (suma 1 al valor)<br>
--- : Decremento (resta 1 al valor)<br>
-+=[n&#xFA;mero] : Incremento de [n&#xFA;mero] a la variable<br>
--=[n&#xFA;mero] : Decremento de [n&#xFA;mero] a la variable</p>
-<h2 class="mume-header" id="-concatenaci%C3%B3n" ebook-toc-level-2 heading="Concatenaci&amp;#xF3;n">Concatenaci&#xF3;n</h2>
-
-<p>+ : Une o concatena texto</p>
+<p>Esta clase nos permite capturar datos por teclado desde la terminal, para utilizarla primero debemos importar la clase:</p>
+<pre class="language-text">import java.util.Scanner;
+</pre>
+<p>Luego debemos instanciar la clase:</p>
+<pre class="language-text">Scanner scanTerminal = new Scanner(System.in);
+</pre>
+<p>Siguiente paso es darle la instrucci&#xF3;n al programa que espere al usuario para el ingreso de datos por teclado a trav&#xE9;s de la terminal.</p>
+<pre class="language-text">int datoInt = scanTerminal.nextInt();
+</pre>
+<p><em>Esta instrucci&#xF3;n tomar&#xE1; como <strong>int</strong> lo que se capture por teclado</em><br>
+<strong>IMPORTANTE: &#xA1;&#xA1;CUIDADO CON LOS TIPOS DE DATOS!!. YA QUE EL USUARIO PODRIA INGRESAR DATA TIPO STRING CUANDO SE ESPERA INTEGER, POR ERROR.</strong></p>
+<pre class="language-text">String datoString = scanTerminal.nextLine();
+</pre>
+<p><em>Esta instrucci&#xF3;n tomar&#xE1; como String lo que se capture por teclado</em></p>
 </div></body></html>
     </div>
   </body>

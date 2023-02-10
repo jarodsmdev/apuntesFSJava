@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>no title</title>
+    <title>La Clase String II</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -21,28 +21,45 @@
         <li><a href="../index.html">Inicio</a></li>
       </ul>
     <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-la-clase-scanner">La Clase Scanner</h1>
+    <html><head></head><body><div><h1 class="mume-header" id="-la-clase-string-ii" ebook-toc-level-1 heading="La Clase String II">La Clase String II</h1>
 
 <hr>
-<h2 class="mume-header" id="-utilizar-la-clase-scanner">Utilizar la clase Scanner</h2>
+<h2 class="mume-header" id="-m%C3%A9todo-substringbeginindex-endindex" ebook-toc-level-2 heading="M&amp;#xE9;todo subString(beginIndex, endIndex)">M&#xE9;todo subString(beginIndex, endIndex)</h2>
 
-<p>Esta clase nos permite capturar datos por teclado desde la terminal, para utilizarla primero debemos importar la clase:</p>
-<pre class="language-text">import java.util.Scanner;
+<p>Permite extraer una cadena de caracteres dentro de otra.<br>
+Este m&#xE9;todo recibe 2 par&#xE1;metros o argumentos:</p>
+<ul>
+<li><strong>beginIndex</strong>: Hace referencia a la posici&#xF3;n inicial del String que vamos a extraer. (Comienza por cero, y recibe un <strong>int</strong>).</li>
+<li><strong>endIndex</strong>: Hace referencia a la posicici&#xF3;n final del String. (valor <strong>no</strong> incluido y recibe un <strong>int</strong>)</li>
+</ul>
+<p>Primero debemos tener una cadena de caracteres a la cual le vamos a extraer datos:</p>
+<pre class="language-text">String frase = &quot;Hola mundo&quot;;
 </pre>
-<p>Luego debemos instanciar la clase:</p>
-<pre class="language-text">Scanner scanTerminal = new Scanner(System.in);
+<p>Declaramos otra variabla la cual contendr&#xE1; el texto extraido</p>
+<pre class="language-text">String frase_resumen = frase.substring(1, 3);
 </pre>
-<p>Siguiente paso es darle la instrucci&#xF3;n al programa que espere al usuario para el ingreso de datos por teclado a trav&#xE9;s de la terminal.</p>
-<pre class="language-text">int datoInt = scanTerminal.nextInt();
+<p>Mostremos el resultado de substring por pantalla:</p>
+<pre class="language-text">System.out.println(frase_resumen);
+&gt;&gt;ol
 </pre>
-<p><em>Esta instrucci&#xF3;n tomar&#xE1; como <strong>int</strong> lo que se capture por teclado</em><br>
-<strong>IMPORTANTE: &#xA1;&#xA1;CUIDADO CON LOS TIPOS DE DATOS!!. YA QUE EL USUARIO PODRIA INGRESAR DATA TIPO STRING CUANDO SE ESPERA INTEGER, POR ERROR.</strong></p>
-<pre class="language-text">String datoString = scanTerminal.nextLine();
+<h2 class="mume-header" id="-m%C3%A9todo-equalsstring_a_comparar" ebook-toc-level-2 heading="M&amp;#xE9;todo equals(string_a_comparar);">M&#xE9;todo equals(string_a_comparar);</h2>
+
+<p>Este m&#xE9;todo permite comparar cadenas de caracteres, retorna <strong>true</strong> cuando son iguales y <strong>false</strong> cuando no lo son, adem&#xE1;s este m&#xE9;todo <strong>distingue</strong> entre may&#xFA;sculas y min&#xFA;sculas.</p>
+<pre class="language-text">String alumno1, alumno2;
+    alumno1 = &quot;David&quot;;
+    alumno2 = &quot;David&quot;;
+    System.out.println(alumno1.equals(alumno2));
+    &gt;&gt;true
 </pre>
-<p><em>Esta instrucci&#xF3;n tomar&#xE1; como String lo que se capture por teclado</em></p>
-<pre class="language-text">Double datoDouble = scanTerminal.nextDouble();
+<h2 class="mume-header" id="-m%C3%A9todo-equalsignorecasestring_a_comparar" ebook-toc-level-2 heading="M&amp;#xE9;todo equalsIgnoreCase(string_a_comparar);">M&#xE9;todo equalsIgnoreCase(string_a_comparar);</h2>
+
+<p>Este m&#xE9;todo funcional igual al anterior, salvo que <strong>ignora may&#xFA;sculas y min&#xFA;sculas</strong> al hacer la comparaci&#xF3;n.</p>
+<pre class="language-text">String alumno1, alumno2;
+alumno1 = &quot;David&quot;;
+alumno2 = &quot;DAVID&quot;;
+System.out.println(alumno1.equalsIgnoreCase(alumno2));
+&gt;&gt;true
 </pre>
-<p><em>Esta instrucci&#xF3;n tomar&#xE1; como Double lo que se capture por teclado</em></p>
 </div></body></html>
     </div>
   </body>

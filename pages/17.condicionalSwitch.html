@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>Condicional switch</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,37 +17,55 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
         <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+            <li><a href="../index.html">Inicio</a></li>
+          </ul>
+        <hr
+    <html><head></head><body><div><h1 class="mume-header" id="-calcula-%C3%A1reas">Calcula &#xC1;reas</h1>
 
-      
 <hr>
+<p>Cree un programa que permita al usuario elegir el &#xE1;rea de figuras geom&#xE9;tricas a calcular:<br>
+Cuadrado, Rect&#xE1;ngulo, Tri&#xE1;ngulo, C&#xED;rculo (Debe usar la condicional <strong>switch</strong>)</p>
+<pre class="language-text">import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while</a></li>
-</ul>
 
+public class Areas {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println(&quot;Elige una opci&#xF3;n: \n1: Cuadrado \n2: Rect&#xE1;ngulo \n3: Tri&#xE1;ngulo \n4: C&#xED;rculo&quot;);   
+
+        int figura = entrada.nextInt(); 
+            
+        switch(figura) {
+        case 1:
+            int lado = Integer.parseInt(JOptionPane.showInputDialog(&quot;Introduce el lado&quot;));
+            System.out.println(&quot;El &#xE1;rea del cuadrado es: &quot; + Math.pow(lado,2));
+            break;
+        case 2:
+            int base = Integer.parseInt(JOptionPane.showInputDialog(&quot;Introduce la base&quot;));
+            int altura = Integer.parseInt(JOptionPane.showInputDialog(&quot;Introduce la altura&quot;));
+            System.out.println(&quot;El &#xE1;rea del rect&#xE1;ngulo es: &quot; + base * altura);
+            break;
+        case 3:
+            base = Integer.parseInt(JOptionPane.showInputDialog(&quot;Introduce la base&quot;));
+            altura = Integer.parseInt(JOptionPane.showInputDialog(&quot;Introduce la altura&quot;));
+            System.out.println(&quot;El &#xE1;rea de un tri&#xE1;ngulo es: &quot; + (base * altura)/2);
+            break;
+        case 4:
+            int radio = Integer.parseInt(JOptionPane.showInputDialog(&quot;Introduce el radio&quot;));
+            System.out.print(&quot;El &#xE1;rea del c&#xED;rculo es: &quot;);
+            System.out.printf(&quot;%1.2f&quot;, Math.PI * Math.pow(radio, 2));
+            break;
+        default:
+            System.out.println(&quot;La opci&#xF3;n ingresada no es correcta.&quot;);
+        }
+    }
+}
+</pre>
 </div></body></html>
     </div>
   </body>

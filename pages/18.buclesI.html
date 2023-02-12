@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>Bucle while</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,37 +17,66 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
-        <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+      </ul>
+    <hr
+    <html><head></head><body><div><h1 class="mume-header" id="-bucles-i" ebook-toc-level-1 heading="Bucles I">Bucles I</h1>
 
-      
 <hr>
-
+<p>En java tenemos 2 tipos de bucles</p>
 <ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while</a></li>
+<li>
+<p><strong>Bucles indeterminados</strong><br>
+Son aquellos que no sabemos cu&#xE1;ntas veces se va a repetir una l&#xED;nea de c&#xF3;digo</p>
+<ul>
+<li>While</li>
+<li>Do while</li>
 </ul>
+</li>
+<li>
+<p><strong>Bucles determinados</strong><br>
+Son aquellos que ya sabemos de antemano cu&#xE1;ntas veces se debe repetir una instrucci&#xF3;n</p>
+<ul>
+<li>For</li>
+<li>For each</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="-bucle-indeterminado-while" ebook-toc-level-2 heading="Bucle indeterminado While">Bucle indeterminado While</h2>
 
+<p>Este bucle se puede traducir al espa&#xF1;ol como <strong>mientras</strong><br>
+Sintaxis:</p>
+<pre class="language-text">while(condicion verdadera){
+    linea 1
+    linea 2
+    ...
+    linea n
+}
+</pre>
+<p>La condici&#xF3;n se romper&#xE1; cuando la condici&#xF3;n sea falsa, bajo este bucle validar&#xE1; si la condici&#xF3;n es cierta y cuando lo sea, en ese momento entrar&#xE1; a las instrucciones caso contrario, nunca lo har&#xE1;.</p>
+<h2 class="mume-header" id="-ejercicio" ebook-toc-level-2 heading="Ejercicio">Ejercicio</h2>
+
+<p>En este caso simularemos un acceso a una aplicaci&#xF3;n con la instrucci&#xF3;n while</p>
+<pre class="language-text">import javax.swing.JOptionPane;
+
+public class Acceso_aplicacion {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String clave = &quot;contrase&#xF1;a&quot;;
+        String pass = &quot;&quot;;
+
+        while(clave.equals(pass) == false) {
+            pass = JOptionPane.showInputDialog(&quot;Introduce la contrase&#xF1;a, por favor&quot;);
+            if(clave.equals(pass) == false) {
+                System.out.println(&quot;Contrase&#xF1;a incorrecta&quot;);
+            };
+        }
+        System.out.println(&quot;Contrase&#xF1;a Correcta. Acceso Permitido&quot;);
+    }
+}
+</pre>
 </div></body></html>
     </div>
   </body>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>Condicional if</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,37 +17,99 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
         <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+            <li><a href="../index.html">Inicio</a></li>
+          </ul>
+        <hr
+    <html><head></head><body><div><h1 class="mume-header" id="-flujos-de-control-i">Flujos de Control I</h1>
 
-      
+<h2 class="mume-header" id="-condicionales-y-bucles">Condicionales y Bucles</h2>
+
 <hr>
+<p>Flujo de ejecuci&#xF3;n es el &#xF3;rden o direcci&#xF3;n que sigue todo programa en su ejecuci&#xF3;n.  Comienza de arriba hasta abajo una por una hasta terminar.</p>
+<p>Este flujo se puede controlar saltando algunas l&#xED;neas o repitiendo otras tantas veces fueran necesarias.</p>
+<p>Todo lo anterior se puede controlar con algo que son denominadas como <strong>condicionales</strong></p>
+<h2 class="mume-header" id="-condicionales">Condicionales</h2>
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while</a></li>
-</ul>
+<p>Tenemos varias por ejemplo:</p>
+<p>Condicional if:</p>
+<pre class="language-text">if(condici&#xF3;n){
+    codigo a ejecutar si la condici&#xF3;n es verdadera (true)
+}
+</pre>
+<p>La estructura <strong>if</strong> puede ir acompa&#xF1;ada de la instrucci&#xF3;n <strong>else</strong> que es opcional</p>
+<p>Condicional Switch:</p>
+<pre class="language-text">Switch (valor a evaluar){
+    Case valor1:
+        c&#xF3;digo a ejecutar;
+        break;
 
+    Case valor2:
+        c&#xF3;digo a ejecutar;
+        break;
+}
+</pre>
+<p>La estructura <strong>Switch</strong> puede ir acompa&#xF1;ada de la instrucci&#xF3;n <strong>default</strong> que no es obligatoria</p>
+<h2 class="mume-header" id="-ejemplo">Ejemplo</h2>
+
+<p>1.- Programa que evalua la edad, y en base a eso responda si es mayor de edad:</p>
+<pre class="language-text">import java.util.Scanner;
+
+public class Evalua_edad {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        //Instancia de clase Scanner
+        Scanner entrada = new Scanner(System.in);
+
+        //Muestra mensaje en pantalla
+        System.out.println(&quot;Introduce tu edad, por favor&quot;);
+
+        //Captura edad desde la consola
+        int edad = entrada.nextInt();
+
+        //Condicional if
+        if(edad &gt;= 18) {
+            System.out.println(&quot;Eres mayor de edad.&quot;);
+        }else {
+            System.out.println(&quot;Eres menor de edad.&quot;);
+        }
+    }
+}
+</pre>
+<p>2.- Programa que evalua si es adolescente (&lt; 18), joven (&lt; 40), maduro (&lt; 65), sino arroje un mensaje diciendo &quot;cuidate&quot;:</p>
+<pre class="language-text">import java.util.Scanner;
+
+public class Evalua_edad {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        //Instancia de clase Scanner
+        Scanner entrada = new Scanner(System.in);
+
+        //Muestra mensaje en pantalla
+        System.out.println(&quot;Introduce tu edad, por favor&quot;);
+
+        //Captura edad desde la consola
+        int edad = entrada.nextInt();
+
+        //Condicionales
+        if(edad &lt; 18) {
+            System.out.println(&quot;Eres adolescente&quot;);
+        }
+        else if(edad &lt; 40){
+            System.out.println(&quot;Eres joven&quot;);
+        }
+        else if(edad &lt; 65) {
+            System.out.println(&quot;Eres maduro&quot;);
+        }
+        else {
+            System.out.println(&quot;Cuidate&quot;);
+        }
+    }
+</pre>
 </div></body></html>
     </div>
   </body>

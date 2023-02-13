@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>While (Juego)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,39 +17,62 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
-        <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+      </ul>
+    <hr
+    <html><head></head><body><div><h1 class="mume-header" id="-while-juego">While (Juego)</h1>
 
-      
 <hr>
+<p>Crearemos un programa que genere un n&#xFA;mero aleatorio entre 0 y 100 y le permitiremos al usuario tratar de adivinar el n&#xFA;mero generado, ademas contaremos los intentos que realiza el usuario.</p>
+<pre class="language-text">import java.util.Scanner;
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while (Introducción)</a></li>
-  <li><a href="./pages/19.While.html">Flujo de Control IV: Bucle while (Juego)</a></li>
-  <li><a href="./pages/20.doWhile.html">Flujo de Control V: Bucle do while</a></li>
-</ul>
 
+public class Adivina_Numero {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        int aleatorio = (int)(Math.random() * 100);
+
+        Scanner entrada = new Scanner(System.in);
+
+        int numero = 0;
+
+        int intentos = 0;
+
+        while (numero != aleatorio){
+
+        numero = entrada.nextInt();
+            System.out.println(&quot;Introduce un n&#xFA;mero, por favor&quot;);
+
+            if(aleatorio &lt; numero){
+                System.out.println(&quot;M&#xE1;s bajo&quot;);
+                intentos++;
+            }
+            else if(aleatorio &gt; numero){
+                System.out.println(&quot;M&#xE1;s alto&quot;);
+                intentos++;
+            }
+        }
+
+        System.out.println(&quot;Correcto, has necesitado: &quot; + (intentos + 1 )+ &quot; intentos&quot;);
+        
+        entrada.close();
+    }
+
+}
+</pre>
+<h2 class="mume-header" id="-problema">Problema</h2>
+
+<p>Este programa tiene un peque&#xF1;o problema, por ejemplo en caso de que el n&#xFA;mero aleatorio sea cero, el bloque while jam&#xE1;s entrar&#xED;a en el bucle y arrojar&#xE1; el mensaje &quot;Correcto, has necesitado: 0 intentos&quot;</p>
+<h2 class="mume-header" id="-por-qu%C3%A9">&#xBF;Por qu&#xE9;?</h2>
+
+<p>Por que el n&#xFA;mero est&#xE1; inicializado como cero al iniciar el programa.</p>
+<h2 class="mume-header" id="-c%C3%B3mo-lo-soluciono">&#xBF;C&#xF3;mo lo soluciono?</h2>
+
+<p>Se solucionar&#xED;a utilizando en vez del bucle <strong>while</strong>, el bucle <strong>do while</strong> ya que este &#xFA;ltimo ingresa al menos al bucle <strong>una</strong> vez y luego valida la condici&#xF3;n de salida a diferencia del bucle <strong>while</strong>.</p>
+<p>Veremos un ejemplo en el siguiente apartado</p>
 </div></body></html>
     </div>
   </body>

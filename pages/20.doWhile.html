@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>do While</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,39 +17,83 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
         <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+            <li><a href="../index.html">Inicio</a></li>
+          </ul>
+        <hr
+    <html><head></head><body><div><h1 class="mume-header" id="-do-while">do while</h1>
 
-      
 <hr>
+<h2 class="mume-header" id="-soluci%C3%B3n-al-ejercicio-anterior">Soluci&#xF3;n al Ejercicio anterior</h2>
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while (Introducción)</a></li>
-  <li><a href="./pages/19.While.html">Flujo de Control IV: Bucle while (Juego)</a></li>
-  <li><a href="./pages/20.doWhile.html">Flujo de Control V: Bucle do while</a></li>
-</ul>
+<p>Vamos a realizar el mismo programa que al apartado anterior ya que corregiremos el problema anteriormente explicado con la instrucci&#xF3;n <strong>do while</strong></p>
+<p>import java.util.Scanner;</p>
+<p>public class adivina_numero2 {</p>
+<pre class="language-text">public static void main(String[] args) {
+    // TODO Auto-generated method stub
 
+
+    int aleatorio = (int)(Math.random() * 100);
+
+    Scanner entrada = new Scanner(System.in);
+
+    int numero = 0;
+
+    int intentos = 0;
+
+    do {
+        intentos++;
+        System.out.println(&quot;Introduce un n&#xFA;mero, por favor&quot;);
+        numero = entrada.nextInt();
+
+        if(aleatorio &lt; numero) {
+            System.out.println(&quot;M&#xE1;s bajo&quot;);
+        }
+        else if(aleatorio &gt; numero) {
+            System.out.println(&quot;M&#xE1;s alto&quot;);
+        }
+
+
+    }while(numero != aleatorio);
+
+    System.out.println(&quot;Correcto, has necesitado: &quot; + (intentos + 1 )+ &quot; intentos&quot;);
+    entrada.close();
+}
+</pre>
+<p>}</p>
+<h2 class="mume-header" id="-ejercicio-do-while">Ejercicio do While</h2>
+
+<p>Aplicaci&#xF3;n para calcular peso ideal.</p>
+<pre class="language-text">import javax.swing.JOptionPane;
+
+
+public class Peso_ideal {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String genero = &quot;&quot;;
+
+        do {
+            genero = JOptionPane.showInputDialog(&quot;Introduce tu g&#xE9;nero (H/M)&quot;);
+        }
+        while(genero.equalsIgnoreCase(&quot;H&quot;)==false &amp;&amp; genero.equalsIgnoreCase(&quot;M&quot;)==false);
+
+        int altura = Integer.parseInt(JOptionPane.showInputDialog(&quot;Introduce tu altura en cm&quot;));
+
+        int pesoIdeal = 0;
+
+        if(genero.equalsIgnoreCase(&quot;H&quot;)) {
+            pesoIdeal = altura - 110;
+        }
+        else if(genero.equalsIgnoreCase(&quot;M&quot;)) {
+            pesoIdeal = altura - 120;
+        }
+
+        System.out.println(&quot;Tu peso ideal es &quot; + pesoIdeal + &quot;kgs.&quot;);
+    }
+
+}
+</pre>
 </div></body></html>
     </div>
   </body>

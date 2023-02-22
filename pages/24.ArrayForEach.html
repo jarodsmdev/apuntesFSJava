@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>Arrays II</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,43 +17,63 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
         <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+            <li><a href="../index.html">Inicio</a></li>
+          </ul>
+        <hr
+    <html><head></head><body><div><h1 class="mume-header" id="-arrays-ii">Arrays II</h1>
 
-      
-<hr>
+<h2 class="mume-header" id="-for-each">For Each</h2>
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while (Introducción)</a></li>
-  <li><a href="./pages/19.While.html">Flujo de Control IV: Bucle while (Juego)</a></li>
-  <li><a href="./pages/20.doWhile.html">Flujo de Control V: Bucle do while</a></li>
-  <li><a href="./pages/21.bucleDeterminados.html">Flujo de Control VI: Bucle for</a></li>
-  <li><a href="./pages/22.bucleForII.html">Flujo de Control VII: Bucle for (Ejemplos)</a></li>
-  <li><a href="./pages/23.Arrays.html">Arrays I | For </a></li>
-  <li><a href="./pages/24.ArrayForEach.html">Arrays II | For Each</a></li>
-</ul>
+<pre class="language-text">    String [] paises = new String [8];
 
+    paises[0] = &quot;Espa&#xF1;a&quot;;
+    paises[1] = &quot;M&#xE9;xico&quot;;
+    paises[2] = &quot;Colombia&quot;;
+    paises[3] = &quot;Per&#xFA;&quot;;
+    paises[4] = &quot;Chile&quot;;
+    paises[5] = &quot;Argentina&quot;;
+    paises[6] = &quot;Ecuador&quot;;
+    paises[7] = &quot;Venezuela&quot;;
+</pre>
+<p>Normalmente usamos el bucle for:</p>
+<pre class="language-text">for(int i = 0; i &lt; paises.length; i++) {
+    System.out.println(&quot;Pa&#xED;s &quot; + (i+1) + &quot;: &quot;+ paises[i]);
+}
+</pre>
+<p>Sin embargo tambi&#xE9;n existe otro bucle llamado for each (tambi&#xE9;n llamado como &apos;for mejorado&apos;)</p>
+<pre class="language-text">String [] paises = {&quot;Espa&#xF1;a&quot;, &quot;M&#xE9;xico&quot;, &quot;Colombia&quot;, &quot;Per&#xFA;&quot;, &quot;Chile&quot;, &quot;Argentina&quot;, &quot;Ecuador&quot;, &quot;Venezuela&quot;};
+
+for(String elemento: paises) {
+    System.out.println(&quot;Pa&#xED;s: &quot; + elemento);
+};
+</pre>
+<h2 class="mume-header" id="-ejemplo">Ejemplo 1</h2>
+
+<pre class="language-text">import javax.swing.JOptionPane;
+
+String [] paises = new String [8];
+
+for(int i = 0; i &lt; 8; i++) {
+        paises[i] = JOptionPane.showInputDialog(&quot;Introduce Pa&#xED;s &quot; + (i+1));
+    }
+
+for(String elemento: paises) {
+        System.out.println(&quot;Pa&#xED;s: &quot; + elemento);
+    }
+</pre>
+<h2 class="mume-header" id="-ejemplo-2">Ejemplo 2</h2>
+
+<pre class="language-text">int[] matriz_aleatorios = new int[150];
+
+for(int i = 0; i &lt; matriz_aleatorios.length; i++){
+    matriz_aleatorios[i] = (int)Math.round(Math.random()*100);
+}
+
+for(int numeros: matriz_aleatorios){
+    System.out.print(numeros + &quot; &quot;)
+}
+</pre>
 </div></body></html>
     </div>
   </body>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bucle while</title>
+    <title>POO IV: Getters y Setters</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -21,62 +21,62 @@
         <li><a href="../index.html">Inicio</a></li>
       </ul>
     <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-bucles-i" ebook-toc-level-1 heading="Bucles I">Bucles I</h1>
+    <html><head></head><body><div><h1 class="mume-header" id="-getters-y-setters">Getters y Setters</h1>
 
 <hr>
-<p>En java tenemos 2 tipos de bucles</p>
-<ul>
-<li>
-<p><strong>Bucles indeterminados</strong><br>
-Son aquellos que no sabemos cu&#xE1;ntas veces se va a repetir una l&#xED;nea de c&#xF3;digo</p>
-<ul>
-<li>While</li>
-<li>Do while</li>
-</ul>
-</li>
-<li>
-<p><strong>Bucles determinados</strong><br>
-Son aquellos que ya sabemos de antemano cu&#xE1;ntas veces se debe repetir una instrucci&#xF3;n</p>
-<ul>
-<li>For</li>
-<li>For each</li>
-</ul>
-</li>
-</ul>
-<h2 class="mume-header" id="-bucle-indeterminado-while" ebook-toc-level-2 heading="Bucle indeterminado While">Bucle indeterminado While</h2>
+<p>En el ejemplo anterior, producto de la encapsulaci&#xF3;n, era imposible obtener la cantidad de ruedas del objeto coche1</p>
+<pre class="language-text">System.out.println(&quot;Este coche tiene &quot; + coche1.ruedas + &quot; ruedas&quot;);
+</pre>
+<p>El c&#xF3;digo anterior arroja error, porque se est&#xE1; tratando de acceder desde la clase <strong>main</strong> al atributo <strong>ruedas</strong> del objeto <strong>coche1</strong>.</p>
+<p>Desde lo anterior surge la importancia de <strong>conectar</strong> una clase con otra, y la &#xFA;nica forma en que una clase interact&#xFA;e con otra es a trav&#xE9;s de <strong>m&#xE9;todos</strong>, por lo cual se desprenden 2 m&#xE9;todos de acceso: <strong>&quot;setters&quot;: o m&#xE9;todos definidores (mutadores) y &quot;getters&quot;: m&#xE9;todos captadores (accesores)</strong></p>
+<h2 class="mume-header" id="-m%C3%A9todos-getters">M&#xE9;todos &quot;Getters&quot;</h2>
 
-<p>Este bucle se puede traducir al espa&#xF1;ol como <strong>mientras</strong><br>
-Sintaxis:</p>
-<pre class="language-text">while(condicion verdadera){
-    linea 1
-    linea 2
-    ...
-    linea n
+<p>Su funci&#xF3;n es devolver el valor de las propiedades de los objetos.</p>
+<h3 class="mume-header" id="-sintaxis">Sintaxis</h3>
+
+<pre class="language-text">public tipo_de_dato_a_devolver nombre_m&#xE9;todo(){
+    instrucciones a ejecutar
+    return dato_a_devolver;
 }
 </pre>
-<p>La condici&#xF3;n se romper&#xE1; cuando la condici&#xF3;n sea falsa, bajo este bucle validar&#xE1; si la condici&#xF3;n es cierta y cuando lo sea, en ese momento entrar&#xE1; a las instrucciones caso contrario, nunca lo har&#xE1;.</p>
-<h2 class="mume-header" id="-ejercicio" ebook-toc-level-2 heading="Ejercicio">Ejercicio</h2>
+<h3 class="mume-header" id="-ejemplo">Ejemplo</h3>
 
-<p>En este caso simularemos un acceso a una aplicaci&#xF3;n con la instrucci&#xF3;n while</p>
-<pre class="language-text">import javax.swing.JOptionPane;
-
-public class Acceso_aplicacion {
-
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        String clave = &quot;contrase&#xF1;a&quot;;
-        String pass = &quot;&quot;;
-
-        while(clave.equals(pass) == false) {
-            pass = JOptionPane.showInputDialog(&quot;Introduce la contrase&#xF1;a, por favor&quot;);
-            if(clave.equals(pass) == false) {
-                System.out.println(&quot;Contrase&#xF1;a incorrecta&quot;);
-            };
-        }
-        System.out.println(&quot;Contrase&#xF1;a Correcta. Acceso Permitido&quot;);
-    }
+<pre class="language-text">public int getRuedas(){
+    return ruedas;
 }
 </pre>
+<p>Este m&#xE9;todo <strong>debe</strong> estar en la clase <strong>Coche</strong> para as&#xED; tener este m&#xE9;todo p&#xFA;blico disponible para otras clases y obtener cantidad la cantidad de ruedas del objeto <strong>coche</strong>.</p>
+<h2 class="mume-header" id="-m%C3%A9todos-setters">M&#xE9;todos &quot;Setters&quot;</h2>
+
+<p>La funci&#xF3;n de un m&#xE9;todo setter es modificar el valor de las propiedades de los objetos.</p>
+<h3 class="mume-header" id="-sintaxis-1">Sintaxis</h3>
+
+<pre class="language-text">public void nombre_m&#xE9;todo(){
+    c&#xF3;digo_que_establece_la_modificaci&#xF3;n;
+}
+</pre>
+<h3 class="mume-header" id="-ejemplo-1">Ejemplo</h3>
+
+<pre class="language-text">public void establece_color(){
+    color = &quot;Azul&quot;;
+}
+
+public String dime_color(){
+    return &quot;El color del coche es &quot; + color;
+}
+</pre>
+<p>Este m&#xE9;todo establece que cualquier objeto sea de color azul.  Lo corregiremos m&#xE1;s adelante.</p>
+<h2 class="mume-header" id="-ahora-c%C3%B3mo-accedo-a-los-atributos-de-la-clase-coche">Ahora c&#xF3;mo accedo a los atributos de la clase Coche?</h2>
+
+<p>Como ya tenemos m&#xE9;todos mutadores y accesores solo basta instanciar un objeto de tipo Coche e invocar los m&#xE9;todos disponibles para la obtenci&#xF3;n de sus atributos o m&#xE9;todos para establecer informaci&#xF3;n</p>
+<pre class="language-text">Coche miCoche = new Coche();
+miCoche.getRuedas;
+miCoche.establece_color();
+miCoche.dime_color();
+</pre>
+<blockquote>
+<p>El c&#xF3;digo anterior crea un nuevo objeto llamado miCoche, luego invoca getRuedas() para obtener la cantidad de ruedas que tiene establecidas a partir de su constructor, y luego invoca establece_color() para establecer el atributo color a Azul y por &#xFA;ltimo invoca a dime_color() para obtener una cadena que indica de qu&#xE9; color es el objeto miCoche.</p>
+</blockquote>
 </div></body></html>
     </div>
   </body>

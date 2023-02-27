@@ -36,9 +36,9 @@
 | - [x] | [video 27](https://youtu.be/XmUz5WJmJVU) | POO I|
 | - [x] | [video 28](https://youtu.be/ZY5pwm92cWQ) | POO II| Clases y Objetos
 | - [x] | [video 29](https://youtu.be/RZOSJ2zuxIs) | POO III| Modularización, Encapsulación
-| - [] | [video 30]() | |
-| - [] | [video ]() | |
-| - [] | [video ]() | |
-| - [] | [video ]() | |
-| - [] | [video ]() | |
-| - [] | [video ]() | |
+| - [x] | [video 30](https://youtu.be/7ALMZymOs_s) | POO IV| Getters y Setters I
+| - [x] | [video 31](https://youtu.be/YQinPQVpSd4) | POO V| Getters y Setters II: Paso de Parámetros
+| - [] | [video 32]() | |
+| - [] | [video 33]() | |
+| - [] | [video 34]() | |
+| - [] | [video 35]() | |

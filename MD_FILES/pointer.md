@@ -38,7 +38,7 @@
 | - [x] | [video 29](https://youtu.be/RZOSJ2zuxIs) | POO III| Modularización, Encapsulación
 | - [x] | [video 30](https://youtu.be/7ALMZymOs_s) | POO IV| Getters y Setters I
 | - [x] | [video 31](https://youtu.be/YQinPQVpSd4) | POO V| Getters y Setters II: Paso de Parámetros
-| - [] | [video 32]() | |
-| - [] | [video 33]() | |
-| - [] | [video 34]() | |
-| - [] | [video 35]() | |
+| - [x] | [video 32](https://youtu.be/jht07O7_R9w) | POO VI| Construcción de Objetos I
+| - [x] | [video 33](https://youtu.be/l8NmSp7Dz-0) | POO VII| Construcción de Objetos II Constructores I
+| - [x] | [video 34](https://youtu.be/UfF2pqCewqo) | POO VIII| Construcción de Objetos III Constructores II
+| - [] | [video 35](https://youtu.be/63Uhd3pUZxA) | POO IX| Construcción de Objetos IV Constructores III

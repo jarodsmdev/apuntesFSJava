@@ -41,4 +41,7 @@
 | - [x] | [video 32](https://youtu.be/jht07O7_R9w) | POO VI| Construcción de Objetos I
 | - [x] | [video 33](https://youtu.be/l8NmSp7Dz-0) | POO VII| Construcción de Objetos II Constructores I
 | - [x] | [video 34](https://youtu.be/UfF2pqCewqo) | POO VIII| Construcción de Objetos III Constructores II
-| - [] | [video 35](https://youtu.be/63Uhd3pUZxA) | POO IX| Construcción de Objetos IV Constructores III
+| - [x] | [video 35](https://youtu.be/63Uhd3pUZxA) | POO IX| Construcción de Objetos IV Constructores III
+| - [] | [video 36](https://youtu.be/tZekQAcSY8o) | Constantes| Uso FINAL
+
+

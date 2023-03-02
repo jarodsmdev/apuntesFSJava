@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>POO IX: Constructor IV</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,59 +17,42 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
-        <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+      </ul>
     <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+    <html><head></head><body><div><h1 class="mume-header" id="-poo-ix-constructores-iv">POO IX: Constructores IV</h1>
 
-      
 <hr>
+<pre class="language-text">public static void main(String[] args){
+        Empleado empleado1 = new Empleado(&quot;Paco G&#xF3;mez&quot;, 85000, 1990, 12, 17);
+        Empleado empleado2 = new Empleado(&quot;Ana L&#xF3;pez&quot;, 95000, 1995, 06, 02);
+        Empleado empleado3 = new Empleado(&quot;Mar&#xED;a Mart&#xED;n&quot;, 105000, 1992, 03, 15);
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while (Introducción)</a></li>
-  <li><a href="./pages/19.While.html">Flujo de Control IV: Bucle while (Juego)</a></li>
-  <li><a href="./pages/20.doWhile.html">Flujo de Control V: Bucle do while</a></li>
-  <li><a href="./pages/21.bucleDeterminados.html">Flujo de Control VI: Bucle for</a></li>
-  <li><a href="./pages/22.bucleForII.html">Flujo de Control VII: Bucle for (Ejemplos)</a></li>
-  <li><a href="./pages/23.Arrays.html">Arrays I | For </a></li>
-  <li><a href="./pages/24.ArrayForEach.html">Arrays II | For Each</a></li>
-  <li><a href="./pages/25.ArraysIIIBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-  <li><a href="./pages/26.ArraysIVBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-</ul>
+        empleado1.subirSueldo(5);
+        empleado2.subirSueldo(5);
+        empleado3.subirSueldo(5);
 
-<h2>Programación Orientada a Objetos</h2>
-<ul>
-  <li><a href="./pages/27.POOI.html">POO I: Introducción</a></li>
-  <li><a href="./pages/28.POOIIClasesObjetos.html">POO II: Clases y Objetos</a></li>
-  <li><a href="./pages/29.POOIVModularizacionEncapsulacion.html">POO III: Modularización y Encapsulamiento</a></li>
-  <li><a href="./pages/30.POOIVgettersySetters.html">POO IV: Getters y Setters I</a></li>
-  <li><a href="./pages/31.POOVGettersySettersIIPasoParametros.html">POO V: Getters y Setters II Paso de Parámetros</a></li>
-  <li><a href="./pages/32.POOVIConstruccionObjetos.html">POO VI: Construcción de Objetos I</a></li>
-  <li><a href="./pages/33.POOVIIConstructores.html">POO VII: Construcción de Objetos II</a></li>
-  <li><a href="./pages/34.POOVIIIConstructoresII.html">POO VIII: Construcción de Objetos III</a></li>
-  <li><a href="./pages/35.POOIXConstructoresIV.html">POO IX: Construcción de Objetos VI</a></li>
+        System.out.println(&quot;Nombre: &quot; + empleado1.dameNombre() + &quot; Sueldo: &quot; + empleado1.dameSueldo() + &quot; Fecha alta: &quot; + empleado1.dameFechaContrato());
+        System.out.println(&quot;Nombre: &quot; + empleado2.dameNombre() + &quot; Sueldo: &quot; + empleado2.dameSueldo() + &quot; Fecha alta: &quot; + empleado2.dameFechaContrato());
+        System.out.println(&quot;Nombre: &quot; + empleado3.dameNombre() + &quot; Sueldo: &quot; + empleado3.dameSueldo() + &quot; Fecha alta: &quot; + empleado3.dameFechaContrato());
+    }
+</pre>
+<p>El c&#xF3;digo anterior tambi&#xE9;n se puede representar usando array y bucle for each</p>
+<pre class="language-text">public static void main(String[] args){
+        Empleado[] misEmpleados = new Empleado[3];
 
-</ul>
+        misEmpleados[0] = new Empleado(&quot;Paco G&#xF3;mez&quot;, 85000, 1990, 12, 17);
+        misEmpleados[1] = new Empleado(&quot;Ana L&#xF3;pez&quot;, 95000, 1995, 06, 02);
+        misEmpleados[2] = new Empleado(&quot;Mar&#xED;a Mart&#xED;n&quot;, 105000, 1992, 03, 15);
 
+        for(Empleado empleado: misEmpleados){
+            empleado.subirSueldo(5);
+            System.out.println(&quot;Nombre: &quot; + empleado.dameNombre() + &quot; Sueldo: &quot; + empleado.dameSueldo() + &quot; Fecha alta: &quot; + empleado.dameFechaContrato());
+        }
+
+    }
+</pre>
 </div></body></html>
     </div>
   </body>

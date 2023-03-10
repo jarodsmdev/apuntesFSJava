@@ -42,6 +42,7 @@
 | - [x] | [video 33](https://youtu.be/l8NmSp7Dz-0) | POO VII| Construcción de Objetos II Constructores I
 | - [x] | [video 34](https://youtu.be/UfF2pqCewqo) | POO VIII| Construcción de Objetos III Constructores II
 | - [x] | [video 35](https://youtu.be/63Uhd3pUZxA) | POO IX| Construcción de Objetos IV Constructores III
-| - [] | [video 36](https://youtu.be/tZekQAcSY8o) | Constantes| Uso FINAL
-
-
+| - [x] | [video 36](https://youtu.be/tZekQAcSY8o) | Constantes| Uso FINAL
+| - [x] | [video 37](https://youtu.be/QIV7FfXa-zY) | Variables y Constantes de Clase| Uso STATIC
+| - [x] | [video 38](https://youtu.be/V0wIZ-OglsY) | Métodos static|
+| - [x] | [video 39](https://youtu.be/_ZWcobe9afw) | Sobrecarga de constructores

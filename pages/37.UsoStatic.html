@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>Uso Static</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,65 +17,78 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
         <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+            <li><a href="../index.html">Inicio</a></li>
+          </ul>
+        <hr>
+    <html><head></head><body><div><h1 class="mume-header" id="variables-y-constantes-de-clase-uso-static">Variables y Constantes de Clase: Uso STATIC</h1>
 
-      
 <hr>
+<p>Vamos a simular una entrega de n&#xFA;meros correlativos y Java se encargar&#xE1; de entregar el n&#xFA;mero por cada objeto de tipo trabajador y lo asignar&#xE1; como Id.</p>
+<p>De manera predeterminada Java al instanciar un objeto, estos objetos tienen una copia de cada campo de clase y sus m&#xE9;todos por lo cual si le asignamos un <strong>Id</strong> a cada objeto ser&#xED;a independiente unos de otros, y perfectamente cada objeto podr&#xED;a repetir el mismo <strong>Id</strong>, y en este caso en particular necesitamos que el id sea correlativo por lo cual necesitamos que la copia de <strong>Id</strong> sea &#xFA;nica y cada objeto <strong>comparta</strong> la misma copia.</p>
+<p>En otras palabras el campo de clase <strong>Id</strong> le pertenecer&#xED;a a la <strong>clase Empleado</strong> y los objetos compartir&#xE1;n dicha informaci&#xF3;n, para lograr esto debemos declarar al campo de clase <strong>Id</strong> con el modificador <strong>static</strong></p>
+<pre class="language-text">public static int Id;
+</pre>
+<p>Esto significa que para utilizar la variable de clase <strong>Id</strong> o un &#x1E3F;etodo est&#xE1;tico <strong>no es necesario instanciar un objeto</strong></p>
+<pre class="language-text">Empleado.Id++;
+</pre>
+<p>El c&#xF3;digo anterior suma 1 al contenido de la variable Id, sin embargo estamos usando el nombre de la clase para la modificaci&#xF3;n, no uno de sus objetos.</p>
+<pre class="language-text">public class Constantes {
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while (Introducción)</a></li>
-  <li><a href="./pages/19.While.html">Flujo de Control IV: Bucle while (Juego)</a></li>
-  <li><a href="./pages/20.doWhile.html">Flujo de Control V: Bucle do while</a></li>
-  <li><a href="./pages/21.bucleDeterminados.html">Flujo de Control VI: Bucle for</a></li>
-  <li><a href="./pages/22.bucleForII.html">Flujo de Control VII: Bucle for (Ejemplos)</a></li>
-  <li><a href="./pages/23.Arrays.html">Arrays I | For </a></li>
-  <li><a href="./pages/24.ArrayForEach.html">Arrays II | For Each</a></li>
-  <li><a href="./pages/25.ArraysIIIBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-  <li><a href="./pages/26.ArraysIVBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-</ul>
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Empleados trabajador1 = new Empleados(&quot;Antonella&quot;);
+        Empleados trabajador2 = new Empleados(&quot;Isidora&quot;);
 
-<h2>Programación Orientada a Objetos</h2>
-<ul>
-  <li><a href="./pages/27.POOI.html">POO I: Introducción</a></li>
-  <li><a href="./pages/28.POOIIClasesObjetos.html">POO II: Clases y Objetos</a></li>
-  <li><a href="./pages/29.POOIVModularizacionEncapsulacion.html">POO III: Modularización y Encapsulamiento</a></li>
-  <li><a href="./pages/30.POOIVgettersySetters.html">POO IV: Getters y Setters I</a></li>
-  <li><a href="./pages/31.POOVGettersySettersIIPasoParametros.html">POO V: Getters y Setters II Paso de Parámetros</a></li>
-  <li><a href="./pages/32.POOVIConstruccionObjetos.html">POO VI: Construcción de Objetos I</a></li>
-  <li><a href="./pages/33.POOVIIConstructores.html">POO VII: Construcción de Objetos II</a></li>
-  <li><a href="./pages/34.POOVIIIConstructoresII.html">POO VIII: Construcción de Objetos III</a></li>
-  <li><a href="./pages/35.POOIXConstructoresIV.html">POO IX: Construcción de Objetos VI</a></li>
-</ul>
+        //MOSTRAR INFO EN TERMINAL
+        System.out.println(trabajador1.devuelveDatos());
+        System.out.println(trabajador2.devuelveDatos());
 
-<h2>Constantes</h2>
-<ul>
-  <li><a href="./pages/36.ConstantesFinal.html">Constantes: Uso Final</a></li>
-  <li><a href="./pages/37.UsoStatic.html">Uso Static</a></li>
-  <li><a href="./pages/38.MetodosStatic.html">Métodos Static</a></li>
-</ul>
+        //REALICEMOS UN CAMBIO DE SECCI&#xD3;N DEL Empleados.Id++;OBJETO trabajador1
+        trabajador1.cambiaSeccion(&quot;RRHH&quot;);
 
+        //MOSTRAR INFO EN TERMINAL
+        System.out.println(trabajador1.devuelveDatos());
+        System.out.println(trabajador2.devuelveDatos());
+
+        //CAMBIAR NOMBRE A OBJETO trabajador1
+        trabajador1.cambiarNombre(&quot;Viviana&quot;);
+    }
+
+}
+
+//CREAR CLASE EMPLEADOS
+class Empleados{
+
+    //ATRIBUTOS
+    private final String nombre;
+    private String seccion;
+    private int Id; //VARIABLE DE CLASE
+    private static int IdSiguiente = 1;
+
+    //M&#xC9;TODO CONSTRUCTOR
+    public Empleados(String nombre) {
+        this.nombre = nombre;
+        seccion = &quot;Administraci&#xF3;n&quot;;
+        Id = IdSiguiente;
+        IdSiguiente++;
+    }
+
+    //M&#xC9;TODOS MUTADORES
+    public void cambiaSeccion(String seccion) {
+        this.seccion = seccion;
+    }
+    public void cambiarNombre(String nombre) {
+        //this.nombre = nombre;
+    }
+
+    //M&#xC9;TODO ACCESOR
+    public String devuelveDatos() {
+        return &quot;El nombre es: &quot; +  nombre + &quot; la secci&#xF3;n es &quot; + seccion + &quot; y el Id=&quot; + Id;
+    }
+
+}
+</pre>
 </div></body></html>
     </div>
   </body>

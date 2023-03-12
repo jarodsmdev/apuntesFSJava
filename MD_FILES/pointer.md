@@ -49,3 +49,6 @@
 | - [x] | [video 40](https://youtu.be/wqoyQ3BxK4A) | La Herencia I
 | - [x] | [video 41](https://youtu.be/rEOFpdI3HY0) | La Herencia II
 | - [x] | [video 42](https://youtu.be/3g_3cbH97cs) | La Herencia III
+| - [x] | [video 43](https://youtu.be/sdJgcMaazmI) | La Herencia IV | Polimorfismo y Enlazado dinámico
+| - [x] | [video 44](https://youtu.be/gmceMV8CqSs) | La Herencia V | Refundición de Objetos (Casting) Clases y Métodos Final
+| - [x] | [video 45](https://youtu.be/ztpYmmecfQs) | Clases Abstractas I |

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>Herencia IV</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,76 +17,44 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
-        <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+      </ul>
     <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+    <html><head></head><body><div><h1 class="mume-header" id="herencia-iv-polimorfismo-y-enlazado-din%C3%A1mico">Herencia IV: Polimorfismo y Enlazado Din&#xE1;mico</h1>
 
-      
 <hr>
+<h2 class="mume-header" id="polimorfismo">Polimorfismo</h2>
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while (Introducción)</a></li>
-  <li><a href="./pages/19.While.html">Flujo de Control IV: Bucle while (Juego)</a></li>
-  <li><a href="./pages/20.doWhile.html">Flujo de Control V: Bucle do while</a></li>
-  <li><a href="./pages/21.bucleDeterminados.html">Flujo de Control VI: Bucle for</a></li>
-  <li><a href="./pages/22.bucleForII.html">Flujo de Control VII: Bucle for (Ejemplos)</a></li>
-  <li><a href="./pages/23.Arrays.html">Arrays I | For </a></li>
-  <li><a href="./pages/24.ArrayForEach.html">Arrays II | For Each</a></li>
-  <li><a href="./pages/25.ArraysIIIBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-  <li><a href="./pages/26.ArraysIVBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-</ul>
+<p>El polimorfismo en Java est&#xE1; estrechamente relacionado con el principio de sustituci&#xF3;n.</p>
+<p><strong>Principio de Sustici&#xF3;n</strong>: Se puede utilizar un objeto de la subclase siempre que el programa espere un objeto de la superclase. o dicho de otro modo, Un objeto se puede comportar de diferente forma dependiendo del contexto.  Las variables objeto son polim&#xF3;rficas.</p>
+<p><img src="data:image/png;charset=utf-8;base64,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" alt="ExamplePolimorfismo">;</p>
+<pre class="language-text">public class Uso_Empleado{
+    public static void main(String[] args){
 
-<h2>Programación Orientada a Objetos I</h2>
-<ul>
-  <li><a href="./pages/27.POOI.html">POO I: Introducción</a></li>
-  <li><a href="./pages/28.POOIIClasesObjetos.html">POO II: Clases y Objetos</a></li>
-  <li><a href="./pages/29.POOIVModularizacionEncapsulacion.html">POO III: Modularización y Encapsulamiento</a></li>
-  <li><a href="./pages/30.POOIVgettersySetters.html">POO IV: Getters y Setters I</a></li>
-  <li><a href="./pages/31.POOVGettersySettersIIPasoParametros.html">POO V: Getters y Setters II Paso de Parámetros</a></li>
-  <li><a href="./pages/32.POOVIConstruccionObjetos.html">POO VI: Construcción de Objetos I</a></li>
-  <li><a href="./pages/33.POOVIIConstructores.html">POO VII: Construcción de Objetos II</a></li>
-  <li><a href="./pages/34.POOVIIIConstructoresII.html">POO VIII: Construcción de Objetos III</a></li>
-  <li><a href="./pages/35.POOIXConstructoresIV.html">POO IX: Construcción de Objetos VI</a></li>
-</ul>
+        Jefatura jefe_RRHH = new Jefatura(&quot;Juan&quot;, 55000, 2006, 9, 25);
 
-<h2>Constantes</h2>
-<ul>
-  <li><a href="./pages/36.ConstantesFinal.html">Constantes: Uso Final</a></li>
-  <li><a href="./pages/37.UsoStatic.html">Uso Static</a></li>
-  <li><a href="./pages/38.MetodosStatic.html">Métodos Static</a></li>
-</ul>
+        jefe_RRHH.estableceIncentivo(2570);
 
-<h2>Programación Orientada a Objetos II</h2>
-<ul>
-  <li><a href="./pages/39.Constructores.html">Sobrecarga de Constructores</a></li>
-  <li><a href="./pages/40.HerenciaI.html">Herencia I</a></li>
-  <li><a href="./pages/41.HerenciaII.html">Herencia II</a></li>
-  <li><a href="./pages/42.HerenciaIII.html">Herencia III</a></li>
-  <li><a href="./pages/43.PolimorfismoEnlazadoDinamico.html">Herencia IV: Polimorfismo y Enlazado Dinámico</a></li>
-  <li><a href="./pages/44.HerenciaVCasting.html">Herencia V: Casting, Clases y Métodos Final</a></li>
+        Empleado[] misEmpleados = new Empleado[6];
 
-</ul>
+        misEmpleados[0] = new Empleado(&quot;Paco G&#xF3;mez&quot;, 85000, 1990, 12, 17);
+        misEmpleados[1] = new Empleado(&quot;Ana L&#xF3;pez&quot;, 95000, 1995, 06, 02);
+        misEmpleados[2] = new Empleado(&quot;Mar&#xED;a Mart&#xED;n&quot;, 105000, 1992, 03, 15);
+        misEmpleados[3] = new Empleado(&quot;Antonio Fern&#xE1;ndez&quot;);
+        misEmpleados[4] = jefe_RRHH; //Principio de Sustituci&#xF3;n
+        misEmpleados[5] = new Jefatura(&quot;Mar&#xED;a&quot;, 95000, 1999, 5, 26);
 
+        for(Empleado empleado: misEmpleados){
+            empleado.subirSueldo(5);
+            System.out.println(&quot;Nombre: &quot; + empleado.dameNombre() + &quot; Sueldo: &quot; + empleado.dameSueldo() + &quot; Fecha alta: &quot; + empleado.dameFechaContrato());
+        }
+
+    }
+}
+</pre>
+<p>El Array misEmpleados s&#xF3;lo acepta objetos de tipo <strong>Empleado</strong>, pero perfectamente puede aceptar un objeto de tipo <strong>Jefatura</strong>, gracias al principio de sustituci&#xF3;n ya que es posible sustituir un objeto de la superClase por otro de su subClase.</p>
+<p>En el bucle for each la variable empleado se comporta como objetos de tipo <strong>Empleado</strong> y en las ultimas 2 vueltas se comporta como un objeto de tipo <strong>Jefatura</strong> gracias al <strong>enlazado din&#xE1;mico</strong> y de este modo el interprete de Java sabe qu&#xE9; m&#xE9;todo llamar de qu&#xE9; objeto.</p>
 </div></body></html>
     </div>
   </body>

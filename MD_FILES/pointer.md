@@ -53,3 +53,5 @@
 | - [x] | [video 44](https://youtu.be/gmceMV8CqSs) | La Herencia V | Refundición de Objetos (Casting) Clases y Métodos Final
 | - [x] | [video 45](https://youtu.be/ztpYmmecfQs) | La Herencia VI | Clases Abstractas I
 | - [x] | [video 46](https://youtu.be/LDZUBY0mxv8) | La Herencia VII | Clases Abstractas II
+| - [x] | [video 47](https://youtu.be/eQWnegzD6ug) | Modificadores de Acceso | La clase Object
+| - [ ] | [video 48](https://youtu.be/DwriSApbm50) | Tipos Enumerados | Clase Enum

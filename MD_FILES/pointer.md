@@ -46,3 +46,6 @@
 | - [x] | [video 37](https://youtu.be/QIV7FfXa-zY) | Variables y Constantes de Clase| Uso STATIC
 | - [x] | [video 38](https://youtu.be/V0wIZ-OglsY) | Métodos static|
 | - [x] | [video 39](https://youtu.be/_ZWcobe9afw) | Sobrecarga de constructores
+| - [x] | [video 40](https://youtu.be/wqoyQ3BxK4A) | La Herencia I
+| - [x] | [video 41](https://youtu.be/rEOFpdI3HY0) | La Herencia II
+| - [x] | [video 42](https://youtu.be/3g_3cbH97cs) | La Herencia III

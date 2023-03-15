@@ -54,4 +54,6 @@
 | - [x] | [video 45](https://youtu.be/ztpYmmecfQs) | La Herencia VI | Clases Abstractas I
 | - [x] | [video 46](https://youtu.be/LDZUBY0mxv8) | La Herencia VII | Clases Abstractas II
 | - [x] | [video 47](https://youtu.be/eQWnegzD6ug) | Modificadores de Acceso | La clase Object
-| - [ ] | [video 48](https://youtu.be/DwriSApbm50) | Tipos Enumerados | Clase Enum
+| - [x] | [video 48](https://youtu.be/DwriSApbm50) | Tipos Enumerados | Clase Enum
+| - [x] | [video 49](https://youtu.be/8xF_BSpSATw) | Interfaces y clases Internas | Interfaces I
+| - [x] | [video 50](https://youtu.be/59Tpg7XbIEo) | Interfaces y clases Internas | Interfaces II

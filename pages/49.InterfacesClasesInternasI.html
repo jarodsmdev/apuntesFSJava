@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>Interfaces I</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,81 +17,118 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
         <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+            <li><a href="../index.html">Inicio</a></li>
+          </ul>
+        <hr>
+    <html><head></head><body><div><h1 class="mume-header" id="interfaces-y-clases-internas-interfaces-i" ebook-toc-level-1 heading="Interfaces y Clases Internas: Interfaces I">Interfaces y Clases Internas: Interfaces I</h1>
 
-      
 <hr>
+<h2 class="mume-header" id="que-son-las-interfaces" ebook-toc-level-2 heading="&amp;#xBF;Que son las Interfaces?">&#xBF;Que son las Interfaces?</h2>
+
+<p>En Java, una interfaz es un tipo de referencia que define un conjunto de m&#xE9;todos abstractos (sin implementaci&#xF3;n) y/o constantes que una clase puede implementar. Una interfaz tambi&#xE9;n puede incluir m&#xE9;todos con implementaci&#xF3;n predeterminada (desde Java 8) y m&#xE9;todos est&#xE1;ticos (desde Java 8).</p>
+<p>Las interfaces se utilizan para establecer un contrato entre una clase y su entorno. Una clase que implementa una interfaz debe proporcionar implementaciones para todos los m&#xE9;todos abstractos declarados en la interfaz. Al implementar una interfaz, una clase est&#xE1; obligada a cumplir con el contrato establecido por la interfaz, lo que permite una mayor flexibilidad en el dise&#xF1;o de clases.</p>
+<p>Las interfaces establecen los comportamientos (directrices) a cumplir por las clases que las implementan, es decir, si una interfaz cuenta con diferentes directrices o comportamientos, las clases <strong>DEBEN S&#xCD; O S&#xCD;</strong> implementarlas en ellas.</p>
+<h2 class="mume-header" id="caracter%C3%ADsticas-de-las-interfaces" ebook-toc-level-2 heading="Caracter&amp;#xED;sticas de las interfaces">Caracter&#xED;sticas de las interfaces</h2>
 
 <ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while (Introducción)</a></li>
-  <li><a href="./pages/19.While.html">Flujo de Control IV: Bucle while (Juego)</a></li>
-  <li><a href="./pages/20.doWhile.html">Flujo de Control V: Bucle do while</a></li>
-  <li><a href="./pages/21.bucleDeterminados.html">Flujo de Control VI: Bucle for</a></li>
-  <li><a href="./pages/22.bucleForII.html">Flujo de Control VII: Bucle for (Ejemplos)</a></li>
-  <li><a href="./pages/23.Arrays.html">Arrays I | For </a></li>
-  <li><a href="./pages/24.ArrayForEach.html">Arrays II | For Each</a></li>
-  <li><a href="./pages/25.ArraysIIIBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-  <li><a href="./pages/26.ArraysIVBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
+<li>Las interfaces s&#xF3;lo contienen <strong>m&#xE9;todos abstractos</strong> y <strong>constantes</strong></li>
+<li>No se pueden instanciar (no uso de new).</li>
+<li>Sus m&#xE9;todos son public y abstract.  S&#xF3;lo de definen no se implementan.</li>
+<li>Los modificadores de acceso <strong>public</strong> y la palabra reservada <strong>abstract</strong> no son obligatorias escribirlas, Java las da por supuestas, las puedes poner u obviar.</li>
+<li>No tienen variables, solo <strong>constantes</strong>.</li>
 </ul>
+<p><img src="data:image/png;charset=utf-8;base64,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" alt="InterfacesExample"></p>
+<h3 class="mume-header" id="sintaxis" ebook-toc-level-3 heading="Sintaxis">Sintaxis</h3>
 
-<h2>Programación Orientada a Objetos I</h2>
-<ul>
-  <li><a href="./pages/27.POOI.html">POO I: Introducción</a></li>
-  <li><a href="./pages/28.POOIIClasesObjetos.html">POO II: Clases y Objetos</a></li>
-  <li><a href="./pages/29.POOIVModularizacionEncapsulacion.html">POO III: Modularización y Encapsulamiento</a></li>
-  <li><a href="./pages/30.POOIVgettersySetters.html">POO IV: Getters y Setters I</a></li>
-  <li><a href="./pages/31.POOVGettersySettersIIPasoParametros.html">POO V: Getters y Setters II Paso de Parámetros</a></li>
-  <li><a href="./pages/32.POOVIConstruccionObjetos.html">POO VI: Construcción de Objetos I</a></li>
-  <li><a href="./pages/33.POOVIIConstructores.html">POO VII: Construcción de Objetos II</a></li>
-  <li><a href="./pages/34.POOVIIIConstructoresII.html">POO VIII: Construcción de Objetos III</a></li>
-  <li><a href="./pages/35.POOIXConstructoresIV.html">POO IX: Construcción de Objetos VI</a></li>
-</ul>
+<pre class="language-text">Class Jefatura extends Empleado implements interfaz1, interfaz2(){
+    //C&#xD3;DIGO JAVA
+}
+</pre>
+<h3 class="mume-header" id="ordenar-empleados-por-sueldo-usando-interfaz-comparable" ebook-toc-level-3 heading="Ordenar Empleados por sueldo usando interfaz Comparable">Ordenar Empleados por sueldo usando interfaz Comparable</h3>
 
-<h2>Constantes</h2>
-<ul>
-  <li><a href="./pages/36.ConstantesFinal.html">Constantes: Uso Final</a></li>
-  <li><a href="./pages/37.UsoStatic.html">Uso Static</a></li>
-  <li><a href="./pages/38.MetodosStatic.html">Métodos Static</a></li>
-</ul>
+<pre class="language-text">class Empleado implements Comparable{
 
-<h2>Programación Orientada a Objetos II</h2>
-<ul>
-  <li><a href="./pages/39.Constructores.html">Sobrecarga de Constructores</a></li>
-  <li><a href="./pages/40.HerenciaI.html">Herencia I</a></li>
-  <li><a href="./pages/41.HerenciaII.html">Herencia II</a></li>
-  <li><a href="./pages/42.HerenciaIII.html">Herencia III</a></li>
-  <li><a href="./pages/43.PolimorfismoEnlazadoDinamico.html">Herencia IV: Polimorfismo y Enlazado Dinámico</a></li>
-  <li><a href="./pages/44.HerenciaVCasting.html">Herencia V: Casting, Clases y Métodos Final</a></li>
-  <li><a href="./pages/45.HerenciaVIClasesAbstractasI.html">Herencia VI: Clases Abstractas I</a></li>
-  <li><a href="./pages/46.HerenciaVIIClasesAbstractasII.html">Herencia VII: Clases Abstractas II</a></li>
-  <li><a href="./pages/47.ModificadoresAccesoObjectClass.html">Modificadores de Acceso | La clase Object</a></li>
-  <li><a href="./pages/48.TiposEnum.html">Tipos Enumerados | La Clase Enum</a></li>
-  <li><a href="./pages/49.InterfacesClasesInternasI.html">Interfaces y Clases Internas | Interfaces I</a></li>
+    public Empleado(String nombre, double sueldo, int agnio, int mes, int dia){
+        this.nombre = nombre;
+        this.sueldo = sueldo;
+        GregorianCalendar calendario = new GregorianCalendar(agnio, mes - 1, dia);
+        altaContrato = calendario.getTime();
+        ++idSiguiente;
+        id = idSiguiente;
+    }
 
-</ul>
 
+    public Empleado(String nombre) {
+        this(nombre, 30000, 2000,01,01);
+    }
+
+    @Override
+    public int compareTo(Object miObjeto){
+        Empleado otroEmpleado = (Empleado) miObjeto;
+        if(this.sueldo &lt; otroEmpleado.sueldo){
+            return -1;
+        }
+        if(this.sueldo &gt; otroEmpleado.sueldo){
+            return 1;
+        }
+        return 0;
+    }
+
+    private String nombre;
+    private double sueldo;
+    private Date altaContrato;
+    private int id;
+    private static int idSiguiente;
+
+    public String dameNombre(){ //GETTER
+        return nombre;
+    }
+
+    public double dameSueldo(){ //GETTER
+        return sueldo;
+    }
+
+    public Date dameFechaContrato(){ //GETTER
+        return altaContrato;
+    }
+
+    public void subirSueldo(double porcentaje){ //SETTER
+        double aumento = sueldo * porcentaje / 100;
+        sueldo += aumento;
+    }
+}
+
+public class Uso_Empleado{
+    public static void main(String[] args){
+
+        Jefatura jefe_RRHH = new Jefatura(&quot;Juan&quot;, 55000, 2006, 9, 25);
+
+        jefe_RRHH.estableceIncentivo(2570);
+
+    	Empleado[] misEmpleados = new Empleado[6];
+
+        misEmpleados[0] = new Empleado(&quot;Paco G&#xF3;mez&quot;, 85000, 1990, 12, 17);
+        misEmpleados[1] = new Empleado(&quot;Ana L&#xF3;pez&quot;, 95000, 1995, 06, 02);
+        misEmpleados[2] = new Empleado(&quot;Mar&#xED;a Mart&#xED;n&quot;, 105000, 1992, 03, 15);
+        misEmpleados[3] = new Empleado(&quot;Antonio Fern&#xE1;ndez&quot;);
+        misEmpleados[4] = jefe_RRHH; //Principio de Sustituci&#xF3;n
+        misEmpleados[5] = new Jefatura(&quot;Mar&#xED;a&quot;, 95000, 1999, 5, 26);
+
+        Jefatura jefa_finanzas = (Jefatura) misEmpleados[5];
+        jefa_finanzas.estableceIncentivo(55000);
+
+        //Jefatura jefe_compras = (Jefatura) misEmpleados[1];
+
+        Arrays.sort(misEmpleados); //USO M&#xC9;TODO SORT QUE OBLIGA A IMPLEMENTAR INTERFAZ COMPARABLE
+
+        for(Empleado empleado: misEmpleados){
+            empleado.subirSueldo(5);
+            System.out.println(&quot;Nombre: &quot; + empleado.dameNombre() + &quot; Sueldo: &quot; + empleado.dameSueldo() + &quot; Fecha alta: &quot; + empleado.dameFechaContrato());
+        }
+    }
+}
+</pre>
 </div></body></html>
     </div>
   </body>

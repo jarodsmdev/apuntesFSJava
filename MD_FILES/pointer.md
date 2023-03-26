@@ -63,3 +63,11 @@
 | - [x] | [video 203](https://youtu.be/ENCwOv2lCms) | Acceso a BBDD | JDBC III
 | - [x] | [video 204](https://youtu.be/U-fDVtRhguk) | Acceso a BBDD | JDBC IV
 | - [x] | [video 205](https://youtu.be/OOWg6m1B7uo) | Acceso a BBDD | JDBC V
+| - [] | [video 206](https://youtu.be/FyNDNzeDEXs) | PRÁCTICA I | JDBC VI
+
+
+| - [] | [video 210](https://youtu.be/xFuNE_ykjKI) | BBDD JDBC X | MVC
+
+
+| - [x] | [video 228](https://youtu.be/ed-OyXDxNjM) | JAVA WEB | JSP I
+| - [x] | [video 229](https://youtu.be/gOpnLcXDmpA) | JAVA WEB | JSP II

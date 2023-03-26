@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>Acceso a BBDD JDBC IV</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,90 +17,51 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
+      <div class="mume markdown-preview">
         <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
+          <li><a href="../index.html">Inicio</a></li>
         </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+      <hr>
+    <html><head></head><body><div><h1 class="mume-header" id="acceso-a-bbdd-jdbc-iv">ACCESO A BBDD. JDBC IV</h1>
 
-      
 <hr>
+<p>Para realizar inserciones, modificaciones o eliminaciones se debe cambiar la sentencia SQL por la correspondiente.</p>
+<p>Este ejemplo inserta un nuevo registro en la base de datos, el m&#xE9;todo <strong>executeUpdate</strong> soporta las instrucciones INSERT, UPDATE y DELETE de SQL.</p>
+<pre class="language-text">package conectaBD;
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while (Introducción)</a></li>
-  <li><a href="./pages/19.While.html">Flujo de Control IV: Bucle while (Juego)</a></li>
-  <li><a href="./pages/20.doWhile.html">Flujo de Control V: Bucle do while</a></li>
-  <li><a href="./pages/21.bucleDeterminados.html">Flujo de Control VI: Bucle for</a></li>
-  <li><a href="./pages/22.bucleForII.html">Flujo de Control VII: Bucle for (Ejemplos)</a></li>
-  <li><a href="./pages/23.Arrays.html">Arrays I | For </a></li>
-  <li><a href="./pages/24.ArrayForEach.html">Arrays II | For Each</a></li>
-  <li><a href="./pages/25.ArraysIIIBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-  <li><a href="./pages/26.ArraysIVBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-</ul>
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
-<h2>Programación Orientada a Objetos I</h2>
-<ul>
-  <li><a href="./pages/27.POOI.html">POO I: Introducción</a></li>
-  <li><a href="./pages/28.POOIIClasesObjetos.html">POO II: Clases y Objetos</a></li>
-  <li><a href="./pages/29.POOIVModularizacionEncapsulacion.html">POO III: Modularización y Encapsulamiento</a></li>
-  <li><a href="./pages/30.POOIVgettersySetters.html">POO IV: Getters y Setters I</a></li>
-  <li><a href="./pages/31.POOVGettersySettersIIPasoParametros.html">POO V: Getters y Setters II Paso de Parámetros</a></li>
-  <li><a href="./pages/32.POOVIConstruccionObjetos.html">POO VI: Construcción de Objetos I</a></li>
-  <li><a href="./pages/33.POOVIIConstructores.html">POO VII: Construcción de Objetos II</a></li>
-  <li><a href="./pages/34.POOVIIIConstructoresII.html">POO VIII: Construcción de Objetos III</a></li>
-  <li><a href="./pages/35.POOIXConstructoresIV.html">POO IX: Construcción de Objetos VI</a></li>
-</ul>
+public class ModificaBBDD {
 
-<h2>Constantes</h2>
-<ul>
-  <li><a href="./pages/36.ConstantesFinal.html">Constantes: Uso Final</a></li>
-  <li><a href="./pages/37.UsoStatic.html">Uso Static</a></li>
-  <li><a href="./pages/38.MetodosStatic.html">Métodos Static</a></li>
-</ul>
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-<h2>Programación Orientada a Objetos II</h2>
-<ul>
-  <li><a href="./pages/39.Constructores.html">Sobrecarga de Constructores</a></li>
-  <li><a href="./pages/40.HerenciaI.html">Herencia I</a></li>
-  <li><a href="./pages/41.HerenciaII.html">Herencia II</a></li>
-  <li><a href="./pages/42.HerenciaIII.html">Herencia III</a></li>
-  <li><a href="./pages/43.PolimorfismoEnlazadoDinamico.html">Herencia IV: Polimorfismo y Enlazado Dinámico</a></li>
-  <li><a href="./pages/44.HerenciaVCasting.html">Herencia V: Casting, Clases y Métodos Final</a></li>
-  <li><a href="./pages/45.HerenciaVIClasesAbstractasI.html">Herencia VI: Clases Abstractas I</a></li>
-  <li><a href="./pages/46.HerenciaVIIClasesAbstractasII.html">Herencia VII: Clases Abstractas II</a></li>
-  <li><a href="./pages/47.ModificadoresAccesoObjectClass.html">Modificadores de Acceso | La clase Object</a></li>
-  <li><a href="./pages/48.TiposEnum.html">Tipos Enumerados | La Clase Enum</a></li>
-  <li><a href="./pages/49.InterfacesClasesInternasI.html">Interfaces y Clases Internas | Interfaces I</a></li>
+        try {
+            //1. CREAR CONEXION
+            Connection miConexion = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/pruebas&quot;, &quot;root&quot;, &quot;12345&quot;);        
+            //2. CREAR OBJETO STATEMEN
+            Statement miStatement = miConexion.createStatement();
 
-</ul>
+                //3. CREAR LA SENTENCIA SQL
+                String instruccionSql = &quot;INSERT INTO productos(codArticulo, nombreArticulo, seccion, precio, fecha, importado, paisOrigen) VALUES(2,&apos;CEPILLO DIENTES&apos;, &apos;HIGIENTE&apos;, 25000, &apos;2023/03/25&apos;, true, &apos;CHILE&apos;)&quot;;
+                
+                //4. EJECUTAR LA SENTENCIA SQL
+                miStatement.executeUpdate(instruccionSql);
+                
+                System.out.println(&quot;&#xA1;REGISTRO INSERTADO CORRECTAMENTE!&quot;);
 
-<h2>
-  <ul>
-    <li><a href="./pages/201.JDBCI.html">Acceso a BBDD. | JDBC I</a></li>
-    <li><a href="./pages/202.JDBCII.html">Acceso a BBDD. | JDBC II</a></li>
-    <li><a href="./pages/204.JDBCIV.html">Acceso a BBDD. | JDBC IV</a></li>
-    <li><a href="./pages/205.JDBCV.html">Acceso a BBDD. | JDBC V</a></li>
-  </ul>
-</h2>
 
+        }catch(Exception e) {
+            System.out.println(&quot;NO CONECTA&quot;);
+            e.printStackTrace();
+        }
+
+    }
+
+}
+</pre>
 </div></body></html>
     </div>
   </body>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CURSO JAVA</title>
+    <title>JSP VIII - IX</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -17,101 +17,148 @@
   </head>
   <body for="html-export">
     <div class="mume markdown-preview">
-      <nav>
         <ul>
-          <li><a href="https://apuntes-mysql.netlify.app/">Curso SQL</a></li>
-        </ul>
-      </nav>
-    <hr>
-    <html><head></head><body><div><h1 class="mume-header" id="-curso-de-java">Curso de Java</h1>
+            <li><a href="../index.html">Inicio</a></li>
+          </ul>
+        <hr>
+    <html><head></head><body><div><h1 class="mume-header" id="java-web--jsp-vii">JAVA WEB | JSP VII</h1>
 
-      
 <hr>
+<p>Crearemos un JSP que conecte con una BBDD mysql para registrar un usuario.</p>
+<p>Formulario HTML</p>
+<pre class="language-text">&lt;!DOCTYPE html&gt;
 
-<ul>
-  <li><a href="./pages/1.tiposDatos.html">Tipos de datos</a></li>
-  <li><a href="./pages/2.variables.html">Variables</a></li>
-  <li><a href="./pages/6.declararVariables.html">Declarar Variables</a></li>
-  <li><a href="./pages/7.constantes.html">Declarar Constantes</a></li>
-  <li><a href="./pages/7.operadores.html">Operadores en JAVA</a></li>
-  <li><a href="./pages/8.primer_programa.html">Primer Programa</li>
-  <li><a href="./pages/9.claseMath.html">La clase Math I</li>
-  <li><a href="./pages/10.claseMath2.html">La clase Math II (Refundición)</a></li>
-  <li><a href="./pages/11.ClaseString.html">La Clase String I</a></li>
-  <li><a href="./pages/12.ClaseStringII.html">La Clase String II</a></li>
-  <li><a href="./pages/claseScanner.html">La Clase Scanner</a></li>
-  <li><a href="./pages/13.acercamientoAPIJava.html">Acercamiento API Java</a></li>
-  <li><a href="./pages/14.InputOuputData.html">Input/Output Data I | Scanner</a></li>
-  <li><a href="./pages/15.ClaseJOptionPane.html">Input/Output Data II | JOptionPane</a></li>
-  <li><a href="./pages/16.condicionalesBuclesI.html">Flujo de Control I: Condicional if</a></li>
-  <li><a href="./pages/17.condicionalSwitch.html">Flujo de Control II: Condicional switch</a></li>
-  <li><a href="./pages/18.buclesI.html">Flujo de Control III: Bucle while (Introducción)</a></li>
-  <li><a href="./pages/19.While.html">Flujo de Control IV: Bucle while (Juego)</a></li>
-  <li><a href="./pages/20.doWhile.html">Flujo de Control V: Bucle do while</a></li>
-  <li><a href="./pages/21.bucleDeterminados.html">Flujo de Control VI: Bucle for</a></li>
-  <li><a href="./pages/22.bucleForII.html">Flujo de Control VII: Bucle for (Ejemplos)</a></li>
-  <li><a href="./pages/23.Arrays.html">Arrays I | For </a></li>
-  <li><a href="./pages/24.ArrayForEach.html">Arrays II | For Each</a></li>
-  <li><a href="./pages/25.ArraysIIIBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-  <li><a href="./pages/26.ArraysIVBidimensionales.html">Arrays III | Arrays Bidimensionales</a></li>
-</ul>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Registro&lt;/title&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
 
-<h2>Programación Orientada a Objetos I</h2>
-<ul>
-  <li><a href="./pages/27.POOI.html">POO I: Introducción</a></li>
-  <li><a href="./pages/28.POOIIClasesObjetos.html">POO II: Clases y Objetos</a></li>
-  <li><a href="./pages/29.POOIVModularizacionEncapsulacion.html">POO III: Modularización y Encapsulamiento</a></li>
-  <li><a href="./pages/30.POOIVgettersySetters.html">POO IV: Getters y Setters I</a></li>
-  <li><a href="./pages/31.POOVGettersySettersIIPasoParametros.html">POO V: Getters y Setters II Paso de Parámetros</a></li>
-  <li><a href="./pages/32.POOVIConstruccionObjetos.html">POO VI: Construcción de Objetos I</a></li>
-  <li><a href="./pages/33.POOVIIConstructores.html">POO VII: Construcción de Objetos II</a></li>
-  <li><a href="./pages/34.POOVIIIConstructoresII.html">POO VIII: Construcción de Objetos III</a></li>
-  <li><a href="./pages/35.POOIXConstructoresIV.html">POO IX: Construcción de Objetos VI</a></li>
-</ul>
+        &lt;style&gt;
+            table{
+                background: #ff6;
+                padding: 10px;
+                border: solid 2px #ff0000;
+            }
 
-<h2>Constantes</h2>
-<ul>
-  <li><a href="./pages/36.ConstantesFinal.html">Constantes: Uso Final</a></li>
-  <li><a href="./pages/37.UsoStatic.html">Uso Static</a></li>
-  <li><a href="./pages/38.MetodosStatic.html">Métodos Static</a></li>
-</ul>
+            td{
+                padding:5px 0;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1 style=&quot;text-align: center;&quot;&gt;Registro&lt;/h1&gt;
 
-<h2>Programación Orientada a Objetos II</h2>
-<ul>
-  <li><a href="./pages/39.Constructores.html">Sobrecarga de Constructores</a></li>
-  <li><a href="./pages/40.HerenciaI.html">Herencia I</a></li>
-  <li><a href="./pages/41.HerenciaII.html">Herencia II</a></li>
-  <li><a href="./pages/42.HerenciaIII.html">Herencia III</a></li>
-  <li><a href="./pages/43.PolimorfismoEnlazadoDinamico.html">Herencia IV: Polimorfismo y Enlazado Dinámico</a></li>
-  <li><a href="./pages/44.HerenciaVCasting.html">Herencia V: Casting, Clases y Métodos Final</a></li>
-  <li><a href="./pages/45.HerenciaVIClasesAbstractasI.html">Herencia VI: Clases Abstractas I</a></li>
-  <li><a href="./pages/46.HerenciaVIIClasesAbstractasII.html">Herencia VII: Clases Abstractas II</a></li>
-  <li><a href="./pages/47.ModificadoresAccesoObjectClass.html">Modificadores de Acceso | La clase Object</a></li>
-  <li><a href="./pages/48.TiposEnum.html">Tipos Enumerados | La Clase Enum</a></li>
-  <li><a href="./pages/49.InterfacesClasesInternasI.html">Interfaces y Clases Internas | Interfaces I</a></li>
+    &lt;center&gt;
+        &lt;form action=&quot;recoge_datos.jsp&quot; method=&quot;POST&quot;&gt;
+            &lt;table width=&quot;35%&quot; border=&quot;0&quot;&gt;
+                &lt;tr&gt;
+                    &lt;td width=&quot;13%&quot;&gt;&lt;label for=&quot;nombre&quot;&gt;Nombre:&lt;/label&gt;&lt;/td&gt;
+                    &lt;td width=&quot;87%&quot;&gt;&lt;input type=&quot;text&quot; id=&quot;nombre&quot; name=&quot;nombre&quot;&gt;&lt;/td&gt;
+                &lt;/tr&gt;
 
-</ul>
+                &lt;tr&gt;
+                    &lt;td width=&quot;13%&quot;&gt;&lt;label for=&quot;apellido&quot;&gt;Apellido:&lt;/label&gt;&lt;/td&gt;
+                    &lt;td width=&quot;87%&quot;&gt;&lt;input type=&quot;text&quot; id=&quot;apellido&quot; name=&quot;apellido&quot;&gt;&lt;/td&gt;
+                &lt;/tr&gt;
 
-<h2>Conexión a Bases de Datos</h2>
-  <ul>
-    <li><a href="./pages/201.JDBCI.html">Acceso a BBDD. | JDBC I</a></li>
-    <li><a href="./pages/202.JDBCII.html">Acceso a BBDD. | JDBC II</a></li>
-    <li><a href="./pages/204.JDBCIV.html">Acceso a BBDD. | JDBC IV</a></li>
-    <li><a href="./pages/205.JDBCV.html">Acceso a BBDD. | JDBC V</a></li>
-  </ul>
+                &lt;tr&gt;
+                    &lt;td width=&quot;13%&quot;&gt;&lt;label for=&quot;usuario&quot;&gt;Usuario:&lt;/label&gt;&lt;/td&gt;
+                    &lt;td width=&quot;87%&quot;&gt;&lt;input type=&quot;text&quot; id=&quot;usuario&quot; name=&quot;usuario&quot;&gt;&lt;/td&gt;
+                &lt;/tr&gt;
 
-<h2>Java Web</h2>
-<ul>
-  <li><a href="./pages/228.JSPI.html">Java Web | JSP I</a></li>
-  <li><a href="./pages/229.JSPII.html">Java Web | JSP II</a></li>
-  <li><a href="./pages/230.JSPIII.html">Java Web | JSP III</a></li>
-  <li><a href="./pages/231.JSPIV.html">Java Web | JSP IV</a></li>
-  <li><a href="./pages/232.JSPV.html">Java Web | JSP V</a></li>
-  <li><a href="./pages/233.JSPVI.html">Java Web | JSP VI</a></li>
-  <li><a href="./pages/234.JSPVII.html">Java Web | JSP VII - VIII</a></li>
-</ul>
+                &lt;tr&gt;
+                    &lt;td width=&quot;13%&quot;&gt;&lt;label for=&quot;password&quot;&gt;Contrase&#xF1;a:&lt;/label&gt;&lt;/td&gt;
+                    &lt;td width=&quot;87%&quot;&gt;&lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot;&gt;&lt;/td&gt;
+                &lt;/tr&gt;
 
+                &lt;tr&gt;
+                    &lt;td width=&quot;13%&quot;&gt;&lt;label for=&quot;pais&quot;&gt;Pa&#xED;s:&lt;/label&gt;&lt;/td&gt;
+                    &lt;td width=&quot;87%&quot;&gt;
+                        &lt;select name=&quot;pais&quot; id=&quot;pais&quot;&gt;
+                            &lt;option&gt;M&#xE9;xico&lt;/option&gt;
+                            &lt;option&gt;Colombia&lt;/option&gt;
+                            &lt;option&gt;Chile&lt;/option&gt;
+                            &lt;option&gt;Per&#xFA;&lt;/option&gt;
+                            &lt;option&gt;Argentina&lt;/option&gt;
+                            &lt;option&gt;Espa&#xF1;a&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
 
+                &lt;tr&gt;
+                    &lt;td&gt;Tecnolog&#xED;as&lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;tecnologias&quot; value=&quot;Java&quot; id=&quot;tecnologias_0&quot;&gt;
+                            Java
+                        &lt;/label&gt;
+                        &lt;br&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;tecnologias&quot; value=&quot;PHP&quot; id=&quot;tecnologias_1&quot;&gt;
+                            PHP
+                        &lt;/label&gt;
+                        &lt;br&gt;
+                        &lt;label&gt;
+                            &lt;input type=&quot;radio&quot; name=&quot;tecnologias&quot; value=&quot;JavaScript&quot; id=&quot;tecnologias_2&quot;&gt;
+                            JavaScript
+                        &lt;/label&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td colspan=&quot;2&quot; align=&quot;center&quot;&gt;
+                        &lt;input type=&quot;submit&quot; name=&quot;button&quot; id=&quot;button&quot; value=&quot;Enviar&quot;&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+
+            &lt;/table&gt;
+
+        &lt;/form&gt;
+    &lt;/center&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>Archivo JSP</p>
+<pre class="language-text">&lt;%@page contentType=&quot;text/html&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+        &lt;title&gt;JSP Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Felicidades!&lt;/h1&gt;
+
+        &lt;%@page import=&quot;java.sql.*&quot; %&gt;
+
+        &lt;% 
+            String nombre = request.getParameter(&quot;nombre&quot;);
+            String apellido = request.getParameter(&quot;apellido&quot;);
+            String usuario = request.getParameter(&quot;usuario&quot;);
+            String password = request.getParameter(&quot;password&quot;);
+            String pais = request.getParameter(&quot;pais&quot;);
+            String tecnologia = request.getParameter(&quot;tecnologias&quot;);
+
+            Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+
+            try{
+                Connection miConexion = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/PROYECTO_JSP&quot;,&quot;root&quot;,&quot;12345&quot;);
+
+                Statement miStatement = miConexion.createStatement();
+
+                String instruccionSQL = &quot;INSERT INTO usuarios(nombre, apellido, usuario, pass, pais, tecnologia) VALUES(&apos;&quot; + nombre + &quot;&apos;, &apos;&quot;+ apellido +&quot;&apos;, &apos;&quot;+ usuario +&quot;&apos;, &apos;&quot;+ password +&quot;&apos;, &apos;&quot;+ pais +&quot;&apos;, &apos;&quot;+ tecnologia +&quot;&apos;)&quot;;
+
+                miStatement.executeUpdate(instruccionSQL);
+
+                out.println(&quot;&lt;h2&gt;&#xA1;Registro Exitoso!&lt;/h2&gt;&quot;);
+            }catch(Exception e){
+                out.println(&quot;&lt;h2&gt;Ha ocurrido un Error&lt;/h2&gt;&quot;);
+            }
+        %&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
 </div></body></html>
     </div>
   </body>

@@ -71,3 +71,8 @@
 | - [x] | [video 229](https://youtu.be/gOpnLcXDmpA) | JAVA WEB | JSP II
 | - [x] | [video 230](https://youtu.be/vxLphsdkNPU) | JAVA WEB | JSP III
 | - [x] | [video 231](https://youtu.be/o_o9qoyfUAM) | JAVA WEB | JSP IV
+| - [x] | [video 232](https://youtu.be/WRTT-tj8374) | JAVA WEB | JSP V
+| - [x] | [video 233](https://youtu.be/5cMnffkrsFo) | JAVA WEB | JSP VI
+| - [x] | [video 234](https://youtu.be/Vpl-iNJlyEg) | JAVA WEB | JSP VII
+| - [x] | [video 235](https://youtu.be/ywXtHNbrnkc) | JAVA WEB | JSP VIII
+| - [] | [video 236](https://youtu.be/ztqAnZ7Vs6o) | JAVA WEB | JSP IX

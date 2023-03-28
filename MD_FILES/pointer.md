@@ -75,4 +75,6 @@
 | - [x] | [video 233](https://youtu.be/5cMnffkrsFo) | JAVA WEB | JSP VI
 | - [x] | [video 234](https://youtu.be/Vpl-iNJlyEg) | JAVA WEB | JSP VII
 | - [x] | [video 235](https://youtu.be/ywXtHNbrnkc) | JAVA WEB | JSP VIII
-| - [] | [video 236](https://youtu.be/ztqAnZ7Vs6o) | JAVA WEB | JSP IX
+| - [x] | [video 236](https://youtu.be/ztqAnZ7Vs6o) | JAVA WEB | JSP IX
+| - [x] | [video 237](https://youtu.be/cEle0k0MIfA) | JAVA WEB | JSP X | SESIONES I
+| - [x] | [video 238](https://youtu.be/S4PTyGHjQOM) | JAVA WEB | JSP XI | SESIONES II
